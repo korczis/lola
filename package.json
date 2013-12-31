@@ -1,12 +1,12 @@
 {
     "name": "lola",
     "description": "Loader & Launcher of Modular NodeJS Apps.",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "private": false,
     "author": "Tomas Korcak <korczis@gmail.com> (https://github.com/korczis)",
     "repository": "https://github.com/korczis/lola",
     "engines": {
-        "node": "0.10.x",
-        "npm": "1.2.x"
+        "node": ">= 0.10.3",
+        "npm": ">= 1.2.0"
     }
 }
