@@ -1,10 +1,23 @@
-# lola
+# Lola
 
-Loader &amp; Launcher of Modular NodeJS Apps
+Loader &amp; Launcher of Modular NodeJS Apps.
 
-## Instalation
+In other words, super lightweight modules manager for nodejs with versioning and dependencies. 
 
-Instalation is super simple.
+## FAQ
+
+**Q**: Is this some competitor/replacment of npm, bower, etc?  
+**A**: No.
+
+**Q**: So what is this good for?  
+**A**: For your modular code.
+
+**Q**: What kind of modular code you mean?   
+**A**: See documentation of modules.
+
+## Installation
+
+Installation is super simple.
 
 ```
 npm install lola
