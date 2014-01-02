@@ -4,6 +4,10 @@ Loader &amp; Launcher of Modular NodeJS Apps.
 
 In other words, super lightweight modules manager for nodejs with versioning and dependencies. 
 
+## Build Status
+
+[![Build Status](https://travis-ci.org/korczis/lola.png?branch=master)](https://travis-ci.org/korczis/lola)
+
 ## FAQ
 
 **Q**: Is this some competitor/replacment of npm, bower, etc?  
