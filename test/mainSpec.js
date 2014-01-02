@@ -23,19 +23,23 @@
 (function () {
     'use strict';
 
-    var util = require('util');
-    var Module = require('../../../lib/module');
+    var path = require('path'),
+        Lola = require('../lib');
 
-    var exports = module.exports = function CoreModule(opts) {
-        if(!opts) {
-            opts = {};
-        }
-    };
+    describe('Lola Loader', function () {
+        var loader = null;
 
-	util.inherits(exports, Module);
+        beforeEach(function () {
+            loader = new Lola.Loader();
+        });
 
-	exports.prototype.meta = (function() {
-		return require('./module.json');
-	}());
+        it('Create Loader Instance', function () {
+            expect(loader).not.toBe(null);
+        });
 
+        it('Add Modules Directory', function () {
+            loader.addModules(path.join(__dirname, '../modules'));
+        });
+    });
 }());
+

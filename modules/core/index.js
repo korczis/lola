@@ -23,14 +23,19 @@
 (function () {
     'use strict';
 
-    var fs = require('fs'),
-        exports = module.exports = function Lola(opts) {
-            if (!opts) {
-                opts = {};
-            }
-        };
+    var util = require('util');
+    var Module = require('../../lib/module');
 
-    exports.Loader = require('./loader');
-    exports.Module = require('./module');
+    var exports = module.exports = function CoreModule(opts) {
+        if (!opts) {
+            opts = {};
+        }
+    };
+
+    util.inherits(exports, Module);
+
+    exports.prototype.meta = (function () {
+        return require('./module.json');
+    }());
 
 }());
