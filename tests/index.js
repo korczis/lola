@@ -23,10 +23,15 @@
 (function () {
     'use strict';
 
+    var path = require('path');
+
     var Lola = require('../lib');
 
-    var instance = new Lola({
-        dirs: []
-    });
+    var loader = new Lola.Loader();
 
+    loader.addModules(path.join(__dirname, './modules'));
+
+	var res = loader.getModule('core');
+
+    console.log(loader.createInstance('core').meta);
 }());
