@@ -24,7 +24,7 @@
     'use strict';
 
     var util = require('util');
-    var Module = require('../../lib/module');
+    var Module = require('../../../lib/module');
 
     var exports = module.exports = function CoreModule(opts) {
         if (!opts) {

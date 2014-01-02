@@ -37,8 +37,16 @@
             expect(loader).not.toBe(null);
         });
 
+        it('Add Module Directory', function () {
+            var res = loader.addModule(path.join(__dirname, './modules/core'));
+
+            expect(res).toBeTruthy();
+        });
+
         it('Add Modules Directory', function () {
-            loader.addModules(path.join(__dirname, '../modules'));
+            var res = loader.addModules(path.join(__dirname, './modules'));
+
+            expect(res).toBeTruthy();
         });
     });
 }());
