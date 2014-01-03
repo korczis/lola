@@ -44,9 +44,7 @@
         });
 
         it('Add Modules Directory', function () {
-            var res = loader.addModules(path.join(__dirname, './modules'));
-
-            expect(res).toBeTruthy();
+            loader.addModules(path.join(__dirname, './modules'));
         });
     });
 }());
