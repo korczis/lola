@@ -31,7 +31,13 @@
 
     loader.addModules(path.join(__dirname, './modules'));
 
-	var res = loader.getModule('core');
+	var mod = loader.getModule('core');
 
-    console.log(loader.createInstance('core').meta);
+    var meta = mod.meta;
+
+    var instance = mod.createInstance();
+
+    instance.run();
+
+    // console.log(loader.createInstance('core').meta);
 }());

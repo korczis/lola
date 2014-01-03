@@ -34,8 +34,28 @@
 
 	util.inherits(exports, Module);
 
+    exports.meta = (function() {
+        return require('./module.json');
+    }());
+
+    exports.createInstance = function(opts) {
+        if (!opts) {
+            opts = {};
+        }
+
+        return new exports(opts);
+    };
+    
 	exports.prototype.meta = (function() {
-		return require('./module.json');
+	    return exports.meta;
 	}());
+
+    exports.prototype.run = function(opts) {
+        if (!opts) {
+            opts = {};
+        }
+
+        console.log('CoreModule.run() - Running ...');
+    };
 
 }());
