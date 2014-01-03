@@ -23,21 +23,25 @@
 (function () {
     'use strict';
 
-    var path = require('path');
+    var path = require('path'),
+        Lola = require('../lib');
 
-    var Lola = require('../lib');
+    describe('Lola Loader', function () {
+        var loader = null;
 
-    var loader = new Lola.Loader();
+        beforeEach(function () {
+            loader = new Lola.Loader();
+        });
 
-    loader.addModules(path.join(__dirname, './modules'));
+        it('Create Loader Instance', function () {
+            expect(loader).not.toBe(null);
+        });
 
-	var mod = loader.getModule('core');
-
-    var meta = mod.meta;
-
-    var instance = mod.createInstance();
-
-    instance.run();
-
-    // console.log(loader.createInstance('core').meta);
+        it('Add Modules Directory', function () {
+            var res = loader.addModules(path.join(__dirname, 'modules'));
+            
+            expect(res).not.toBe(null);
+        });
+    });
 }());
+
