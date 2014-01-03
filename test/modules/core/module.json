@@ -1,6 +1,6 @@
 {
     "name": "core",
-    "description": "Lola core test module",
+    "description": "Lola Core test module",
     "version": "0.0.1",
     "private": false,
     "author": "Tomas Korcak <korczis@gmail.com> (https://github.com/korczis)",

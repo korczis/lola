@@ -46,7 +46,7 @@
         it('Add Modules Directory', function () {
             var res = loader.addModules(path.join(__dirname, './modules'));
 
-            expect(res).toBeTruthy();
+            expect(res.length === 2).toBeTruthy();
         });
     });
 }());
